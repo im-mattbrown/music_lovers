@@ -1,0 +1,9 @@
+<h1> Hello World! </h1>
+<div class="edit-form input-field">
+  <%= form_for @user, url: wizard_path  do |f| %>
+    I am<%= f.number_field :age, :placeholder=>"Age", style: 'display:inline;'%> years old<br>
+    living in<%= f.text_field :location, :placeholder=>"City" %>
+    looking for<%= f.collection_select :seeking, User::SEEKING, :to_s, :to_s, :include_blank => false, :prompt => 'Select' %><br>
+    <%= f.submit "Submit", :class=>'waves-effect waves-red waves-ripple btn' %>
+  <% end %>
+</div>
