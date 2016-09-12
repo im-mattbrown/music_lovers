@@ -1,1 +1,8 @@
-video
+Time to show potential matches who you are... and what better way than your favorite youtube video. This will serve as your "profile video" and will be the first thing a potential match will see and base their judgements off of, so no pressure. Choose something that represesnts your music taste, sense of humor or even an hour long Python lecture. It is completely up to you to decide how you want to make your first impression. Grab the end of the link like this <span><img src="http://i.imgur.com/kSM39R9.png"> and paste it below. Click continue when you're done.
+
+<%= form_for @user, url: wizard_path  do |f| %>
+  <%= f.text_field :profile_video, :placeholder => 'Youtube URL here, ex. dQw4w9WgXcQ' %>
+    <%= f.submit "Upload", :class=>'waves-effect waves-red waves-ripple btn' %>
+<% end %>
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/<%= @user.profile_video %>"frameborder="0" allowfullscreen></iframe>

@@ -1,0 +1,19 @@
+Great! your well on your way. Now its time to get a little more personal and let your potential match see your freak flag fly. Answer these 7 questions to the best of your ability. Feel free to be as brief or verbose as you want, get creative with your answers and explain your choices. Click continue when you are satisfied with your responses.</br>
+</br>
+<%= form_for @user, url: wizard_path  do |f| %>
+  <h5> Question #1 </h5>
+    <%= f.text_area :answer1, :placeholder => 'Answer Here' %>
+  <h5> Question #2 </h5>
+    <%= f.text_area :answer2, :placeholder => 'Answer Here' %>
+  <h5> Question #3 </h5>
+    <%= f.text_area :answer3, :placeholder => 'Answer Here' %>
+  <h5> Question #4 </h5>
+    <%= f.text_area :answer4, :placeholder => 'Answer Here' %>
+  <h5> Question #5 </h5>
+    <%= f.text_area :answer5, :placeholder => 'Answer Here' %>
+  <h5> Question #6 </h5>
+    <%= f.text_area :answer6, :placeholder => 'Answer Here' %>
+  <h5> Question #7 </h5>
+    <%= f.text_area :answer7, :placeholder => 'Answer Here' %>
+    <%= f.submit "Sumbit", :class=>'waves-effect waves-red waves-ripple btn' %>
+<% end %>
