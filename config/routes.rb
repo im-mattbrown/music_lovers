@@ -1,3 +1,13 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  resources :users
+
+  resources :user_steps
+  post '/user_steps/seeking' => 'user_steps#update'
+
+
+
+  get '/login' => 'sessions#new', as: 'login'
+  get '/logout' => 'sessions#destroy'
+  post '/sessions' => 'sessions#create'
+  root to: 'users#index'
 end
