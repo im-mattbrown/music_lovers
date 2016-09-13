@@ -1,15 +1,7 @@
-<img class='responsive-img title' src='http://i.imgur.com/XQaeuym.png'>
-<div class="signup-form">
-<h5> Sign Up </h5>
+<body class="musiclovers-background">
+  <img class='responsive-img img-title' src='http://i.imgur.com/XQaeuym.png'>
 
-  <%= form_for @user do |f| %>
-    <%= f.text_field :first_name, :placeholder=>"First Name"%>
-    <%= f.text_field :last_name, :placeholder=>"Last Name" %>
-    <%= f.text_field :username, :placeholder=>"User Name" %>
-    <%= f.text_field :email, :placeholder=>"Email" %>
-    <%= f.password_field :password, :placeholder=>"Password" %>
-    <%= f.uploadcare_uploader :profile_photo, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "500x500", :clearable => true } %><br><br>
-    <%= f.submit "Submit", :class=>'waves-effect waves-red waves-ripple btn' %><br>
-  <% end %>
-  <span class='already-user'><%= link_to 'Already a user, login here', login_path, :class => 'nav-hover' %></span>
-</div>
+  <h6 class='splash-text'> Music Lovers is a dating app for singles that are tired of the current online dating scene and are looking to meet others with similar music taste.</h6>
+
+  <%= link_to 'Get Started', new_user_path, :class => 'btn splashbtn' %>
+</body>

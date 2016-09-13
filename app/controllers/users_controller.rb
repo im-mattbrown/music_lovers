@@ -20,20 +20,22 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save
       session[:user_id] = @user.id
+      flash[:notice] = "Your profile was successfully updated."
       redirect_to user_steps_path
     else
+      flash[:notice] = "Your profile was successfully updated."
       render :new
     end
   end
 
   def edit
+    @user = User.find_by_id(params[:id])
     if !auth_through_user
       auth_fail("Uh Uh Uh", user_path)
     end
   end
 
   def update
-    p "SHIT"
     if auth_through_user
       if @user.update(user_params)
         flash[:notice] = "Your profile was successfully updated."

@@ -41,7 +41,6 @@
   }
 
   #mobile-location {
-    display: none;
   }
 
   .age {
@@ -61,6 +60,10 @@
     top: 6px;
     height: 50px;
     width: auto;
+  }
+
+  .nav-color {
+    background-color: #243E36;
   }
 
   .title {
@@ -91,11 +94,60 @@
     float: right;
   }
   .profile {
-    position: relative;
+    position: absolute;
+    left: 14%;
   }
   #mobile-profile {
     width: 700px;
     height: 700px;
+  }
+  .btn {
+    background-color: #3E505B;
+  }
+  .mobile-edit-button {
+    position: absolute;
+    top: 250%;
+  }
+  .mobile-edit {
+    height: 70px;
+    font-size: 40px;
+    padding-top: 15px;
+  }
+  .splash-text {
+    position: absolute;
+    display: flex;
+    width: 40%;
+  }
+  .musiclovers-background {
+    background-image: url('http://i.imgur.com/wk8wqER.png');
+    background-size: cover;
+  }
+  .img-title {
+    background-color: rgba(247,247,242, 0.7);
+    width: 80%;
+    position: absolute;
+    left: 5%;
+    top: 30%;
+    border-radius: 5px;
+  }
+  .splash-text {
+    position: absolute;
+    left: 33%;
+    top: 40%;
+    display: flex;
+    width: 60%;
+    font-size: 35px;
+    background-color: rgba(247,247,242, 0.8);
+    border-radius: 5px;
+  }
+  .splashbtn {
+    position: absolute;
+    top: 66%;
+    left: 30%;
+    width: 40%;
+    height: 5%;
+    font-size: 40px;
+    padding-top: 30px;
   }
 }
 
@@ -109,8 +161,8 @@
   }
 
   .profile-photo {
-    height: 500px;
-    width: 500px;
+    height: 400px;
+    width: 400px;
   }
 
   .age {
@@ -167,6 +219,10 @@
     background-color: #3E505B;
   }
 
+  .btn:hover{
+    background-color: #64A6BD;
+  }
+
   .edit-profile {
     position: relative;
     left: 5%;
@@ -175,5 +231,49 @@
 
   .inputbox {
     display: inline;
+  }
+
+  .splash-text {
+    position: absolute;
+    left: 23%;
+    top: 50%;
+    display: flex;
+    width: 55%;
+    font-size: 30px;
+    background-color: rgba(247,247,242, 0.9);
+    border-radius: 5px;
+  }
+  .musiclovers-background {
+    background-image: url('http://i.imgur.com/hRJZKgk.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .img-title {
+    background-color: rgba(247,247,242, 0.9);
+    width: 60%;
+    position: absolute;
+    left: 5%;
+    top: 30%;
+    border-radius: 5px;
+  }
+
+  .splashbtn {
+    position: absolute;
+    top: 66%;
+    left: 42%;
+  }
+  .qanda{
+    font-size: 20px;
+    padding-left: 5px;
+  }
+
+  .qanda h5{
+    font-weight: bold;
+  }
+  .answers-top {
+    padding-left: 20%;
+    width: 80%;
+    left: 20%;
+    background-color: rgba (255, 255, 255, .7);
   }
 }

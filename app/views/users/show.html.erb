@@ -8,7 +8,9 @@
   <h5 id="mobile-location"> Lives in </h5>
   <%= @user.location %>
   </div>
+  <div class="mobile-edit-button">
   <% if current_user != nil && current_user.id == @user.id %>
-    <%= link_to "Edit Profile", edit_user_path, :class => "btn"  %>
+    <%= link_to "Edit Profile", edit_user_path, :class => "btn mobile-edit"  %>
   <% end %>
+  </div>
 </div>
