@@ -19,14 +19,17 @@ class UsersController < ApplicationController
   def create
     @user = User.new(user_params)
     if @user.save
-      session[:user_id] = @user.id
+      login(@user)
+      flash[:notice] = "Congratulations, you have successfully signed up!"
       redirect_to user_steps_path
     else
-      render :new
+      flash[:notice] = "Sorry, please try again.There are some issues:  #{@user.errors.full_messages.join(', ')}."
+      redirect_to new_user_path
     end
   end
 
   def edit
+    puts "SHIT"
     if !auth_through_user
       auth_fail("Uh Uh Uh", user_path)
     end
@@ -48,7 +51,7 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :seeking, :age, :profile_video, :answer1, :answer2, :answer3, :answer4, :answer5, :answer6, :answer7, :playlist, :suitors, :location, :profile_photo)
+    params.require(:user).permit(:first_name, :last_name, :username, :email, :password, :profile_photo)
   end
 
   def find_user
