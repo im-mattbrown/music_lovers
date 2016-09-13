@@ -5,10 +5,10 @@ class User < ApplicationRecord
 
   SEEKING = ['f4f', 'f4m', 'm4f', 'm4m']
 
-  validates :first_name, :last_name, :password, :seeking, :age, :answer1, :answer2, :answer3, :answer4, :answer5, :answer6, :answer7, :playlist, :suitors, :location, :profile_photo
+  validates :first_name, :last_name, :password, :seeking, :age, :answer1, :answer2, :answer3, :answer4, :answer5, :answer6, :answer7, :playlist, :suitors, :location, :profile_photo,
     presence: true
-    
-  validates :username
+
+  validates :username,
     presence: true,
     uniqueness: true,
     length: { minimum: 1, maximum: 50 }
