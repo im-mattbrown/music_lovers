@@ -1,19 +1,29 @@
-Great! your well on your way. Now its time to get a little more personal and let your potential match see your freak flag fly. Answer these 7 questions to the best of your ability. Feel free to be as brief or verbose as you want, get creative with your answers and explain your choices. Click continue when you are satisfied with your responses.</br>
-</br>
-<%= form_for @user, url: wizard_path  do |f| %>
-  <h5> Question #1 </h5>
-    <%= f.text_area :answer1, :placeholder => 'Answer Here' %>
-  <h5> Question #2 </h5>
-    <%= f.text_area :answer2, :placeholder => 'Answer Here' %>
-  <h5> Question #3 </h5>
-    <%= f.text_area :answer3, :placeholder => 'Answer Here' %>
-  <h5> Question #4 </h5>
-    <%= f.text_area :answer4, :placeholder => 'Answer Here' %>
-  <h5> Question #5 </h5>
-    <%= f.text_area :answer5, :placeholder => 'Answer Here' %>
-  <h5> Question #6 </h5>
-    <%= f.text_area :answer6, :placeholder => 'Answer Here' %>
-  <h5> Question #7 </h5>
-    <%= f.text_area :answer7, :placeholder => 'Answer Here' %>
-    <%= f.submit "Sumbit", :class=>'waves-effect waves-red waves-ripple btn' %>
-<% end %>
+<div class='qanda'>
+  <div class='answers-top'>
+    <p> Great! your well on your way. Now its time to get a little more personal and let your potential match see your freak flag fly. Answer these 7 questions to the best of your ability. Feel free to be as brief or verbose as you want, get creative with your answers and explain your choices. Click continue when you are satisfied with your responses.</p>
+  </div>
+  <%= form_for @user, url: wizard_path  do |f| %>
+    <h5> Question #1 </h5>
+      <p>Tomorrow is Saturday would you rather be at a musc festival, see a show at a sold out arena, get tickets for a great local venue, go down the street to a house show or stay at home and listen to your favorite album?</p>
+      <%= f.text_area :answer1, :placeholder => 'Answer Here' %>
+    <h5> Question #2 </h5>
+      <p>Fu@k, Marry, Kill? Justin Beiber, Drake, Justin Timberlake</p>
+      <%= f.text_area :answer2, :placeholder => 'Answer Here' %>
+    <h5> Question #3 </h5>
+      <p>Fu@k, Marry, Kill? Rhianna, Beyonce, Taylor Swift</p>
+      <%= f.text_area :answer3, :placeholder => 'Answer Here' %>
+    <h5> Question #4 </h5>
+      <p>What is the first album that you bought for yourself?</p>
+      <%= f.text_area :answer4, :placeholder => 'Answer Here' %>
+    <h5> Question #5 </h5>
+      <p>You are in charge of booking for Coachella next year and you can resurrect the dead. Who are your three headliners?</p>
+      <%= f.text_area :answer5, :placeholder => 'Answer Here' %>
+    <h5> Question #6 </h5>
+      <p>What is the first concert that you chose to go to and how old were you?</p>
+      <%= f.text_area :answer6, :placeholder => 'Answer Here' %>
+    <h5> Question #7 </h5>
+      <p>If you were in a band would you rather be the singer, songwriter, or play an instrument?</p>
+      <%= f.text_area :answer7, :placeholder => 'Answer Here' %>
+      <%= f.submit "Sumbit", :class=>'waves-effect waves-red waves-ripple btn' %>
+  <% end %>
+</body>

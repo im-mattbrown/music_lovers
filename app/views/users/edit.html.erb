@@ -1,0 +1,29 @@
+<div class = "edit-profile">
+  <%= form_for @user do |f| %>
+    First Name: <%= f.text_field :first_name, :placeholder=>"First Name", :class => 'inputbox'%>
+    Last Name: <%= f.text_field :last_name, :placeholder=>"Last Name", :class => 'inputbox' %>
+    Username: <%= f.text_field :username, :placeholder=>"User Name", :class => 'inputbox' %>
+    Email:<%= f.text_field :email, :placeholder=>"Email", :class => 'inputbox' %>
+    Age:<%= f.number_field :age, :placeholder=>"Age", style: 'display:inline;'%>
+    Location:<%= f.text_field :location, :placeholder=>"City", :class => 'inputbox' %>
+    Provile Video:<%= f.text_field :profile_video, :placeholder => 'Youtube URL here, ex. dQw4w9WgXcQ', :class => 'inputbox' %>
+    Spotify Playlist:<%= f.text_field :playlist, :placeholder=>"URI here", :class => 'inputbox' %>
+    Seeking: <%= f.collection_select :seeking, User::SEEKING, :to_s, :to_s, :include_blank => false, :prompt => 'Select', :class => 'inputbox' %>
+    <h5> Question #1 </h5>
+      <%= f.text_area :answer1, :placeholder => 'Answer Here', :class => 'inputbox' %>
+    <h5> Question #2 </h5>
+      <%= f.text_area :answer2, :placeholder => 'Answer Here', :class => 'inputbox' %>
+    <h5> Question #3 </h5>
+      <%= f.text_area :answer3, :placeholder => 'Answer Here', :class => 'inputbox' %>
+    <h5> Question #4 </h5>
+      <%= f.text_area :answer4, :placeholder => 'Answer Here', :class => 'inputbox' %>
+    <h5> Question #5 </h5>
+      <%= f.text_area :answer5, :placeholder => 'Answer Here', :class => 'inputbox' %>
+    <h5> Question #6 </h5>
+      <%= f.text_area :answer6, :placeholder => 'Answer Here', :class => 'inputbox' %>
+    <h5> Question #7 </h5>
+      <%= f.text_area :answer7, :placeholder => 'Answer Here', :class => 'inputbox' %>
+    Profile Photo:<br><%= f.uploadcare_uploader :profile_photo, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "500x500", :clearable => true }, :class => 'inputbox' %><br><br>
+    <%= f.submit "Submit", :class=>'waves-effect waves-red waves-ripple btn' %><br>
+  <% end %>
+</div>
