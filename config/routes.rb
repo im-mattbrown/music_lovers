@@ -9,5 +9,5 @@ Rails.application.routes.draw do
   get '/login' => 'sessions#new', as: 'login'
   get '/logout' => 'sessions#destroy'
   post '/sessions' => 'sessions#create'
-  root to: 'users#index'
+  root to: 'users#new'
 end
