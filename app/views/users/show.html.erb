@@ -1,1 +1,7 @@
-<h1> Got here! </h1>
+<h3><%= @user.first_name %> <%= @user.last_name %></h3>
+<div class='profile-photo'>
+<img src='<%= @user.profile_photo %>' class="profile-photo"><br>
+<span class='age'><%= @user.age %></span>
+</div>
+<h5> Location </h5>
+<%= @user.location %>

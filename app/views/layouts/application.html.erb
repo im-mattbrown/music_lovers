@@ -6,9 +6,47 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="icon" href="http://i.imgur.com/LJ7HS6Z.png">
+    <script>
+      UPLOADCARE_LOCALE = "en";
+      UPLOADCARE_TABS = "file url facebook gdrive dropbox instagram evernote flickr skydrive";
+      UPLOADCARE_PUBLIC_KEY = "5dd77238e4a69090c9c9";
+    </script>
+    <script charset="utf-8" src="//ucarecdn.com/widget/2.10.0/uploadcare/uploadcare.full.min.js"></script>
   </head>
 
   <body>
+    <% if current_user %>
+    <nav>
+     <div class="nav-wrapper black lighten-7">
+       <img class="nav-logo logo" src="http://i.imgur.com/LJ7HS6Z.png"/>
+       <a href="#" data-activates="mobile-demo" class="button-collapse hamburger" id='mobile-hamburger'><i class="material-icons">menu</i></a>
+       <ul class="right hide-on-med-and-down">
+         <% if current_user %>
+           <li><span><%= link_to "Profile", current_user, :class => 'nav-hover' %></span></li>
+           <li><%= link_to "Logout", "/logout", :class => 'nav-hover' %></li>
+         <% else %>
+           <li><%= link_to 'Login', login_path, :class => 'nav-hover' %></li>
+           <li><%= link_to 'Signup', new_user_path, :class => 'nav-hover' %></li>
+         <% end %>
+       </ul>
+       <ul class="side-nav" id="mobile-demo">
+         <div class="slide-bar">
+           <% if current_user %>
+             <li><span><%= link_to "Profile", current_user, :class => 'nav-hover' %></span></li>
+             <li><%= link_to "Logout", "/logout" %></li>
+           <% else %>
+             <li><%= link_to 'Login', login_path %></li>
+             <li><%= link_to 'Signup', new_user_path %></li>
+           <% end %>
+
+       </div>
+       </ul>
+     </div>
+    </nav>
+    <% end %>
     <%= yield %>
   </body>
 </html>
