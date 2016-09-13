@@ -30,17 +30,31 @@
     width: 300px;
   }
 
+  .profile-location {
+    position: absolute;
+    top: 220%;
+    font-size: 65px;
+  }
+
+  #mobile-name {
+    font-size: 100px;
+  }
+
+  #mobile-location {
+    display: none;
+  }
+
   .age {
     position: relative;
-    left: 88%;
-    bottom: 18%;
+    left: 210%;
+    bottom: 29%;
     width: 40px;
     height: 40px;
     background-color: #F7F7F2;
     padding: 20px, 20px, 20px, 20px;
     border-radius: 50%;
     border: 5px solid #222725;
-    font-size: 45px;
+    font-size: 100px;
   }
   .nav-logo {
     position: absolute;
@@ -76,6 +90,13 @@
   #mobile-hamburger {
     float: right;
   }
+  .profile {
+    position: relative;
+  }
+  #mobile-profile {
+    width: 700px;
+    height: 700px;
+  }
 }
 
 @media #{$large-and-up} {
@@ -88,14 +109,14 @@
   }
 
   .profile-photo {
-    height: 300px;
-    width: 300px;
+    height: 500px;
+    width: 500px;
   }
 
   .age {
     position: relative;
-    left: 88%;
-    bottom: 18%;
+    left: 90%;
+    bottom: 10%;
     width: 40px;
     height: 40px;
     background-color: #F7F7F2;
@@ -121,7 +142,7 @@
 
   .signup-form {
     position: absolute;
-    width: 44%;
+    width: 47%;
     left: 3%;
   }
 
@@ -129,5 +150,30 @@
     position: absolute;
     width: 29%;
     left: 3%;
+  }
+  .profile {
+    position: relative;
+    left: 33%;
+  }
+  #mobile-name {
+    font-size: 65px;
+  }
+
+  .nav-color {
+    background-color: #243E36;
+  }
+
+  .btn {
+    background-color: #3E505B;
+  }
+
+  .edit-profile {
+    position: relative;
+    left: 5%;
+    width: 50%;
+  }
+
+  .inputbox {
+    display: inline;
   }
 }
