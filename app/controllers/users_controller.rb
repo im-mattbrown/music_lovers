@@ -29,14 +29,13 @@ class UsersController < ApplicationController
   end
 
   def edit
-    puts "SHIT"
+    @user = User.find_by_id(params[:id])
     if !auth_through_user
       auth_fail("Uh Uh Uh", user_path)
     end
   end
 
   def update
-    p "SHIT"
     if auth_through_user
       if @user.update(user_params)
         flash[:notice] = "Your profile was successfully updated."
