@@ -1,0 +1,37 @@
+<h3> Answers from -<%= @user.username %> </h3>
+
+<div class="user-answers">
+  <h5> Question #1 </h5>
+    <p><b>Tomorrow is Saturday would you rather be at a musc festival, see a show at a sold out arena, get tickets for a great local venue, go down the street to a house show or stay at home and listen to your favorite album?</b></p>
+    <%= @user.answer1 %>
+  <h5> Question #2 </h5>
+    <p><b>Fu@k, Marry, Kill? Justin Beiber, Drake, Justin Timberlake</b></p>
+    <%= @user.answer2 %>
+  <h5> Question #3 </h5>
+    <p><b>Fu@k, Marry, Kill? Rhianna, Beyonce, Taylor Swift</b></p>
+    <%= @user.answer3 %>
+  <h5> Question #4 </h5>
+    <p><b>What is the first album that you bought for yourself?</b></p>
+    <%= @user.answer4 %>
+  <h5> Question #5 </h5>
+    <p><b>You are in charge of booking for Coachella next year and you can resurrect the dead. Who are your three headliners?</b></p>
+    <%= @user.answer5 %>
+  <h5> Question #6 </h5>
+    <p><b>What is the first concert that you chose to go to and how old were you?</b></p>
+    <%= @user.answer6 %>
+  <h5> Question #7 </h5>
+    <p><b>If you were in a band would you rather be the singer, songwriter, or play an instrument?</b></p>
+    <%= @user.answer7%>
+</div>
+<div class="answers-icons">
+  <span class="answers-thumbdown">
+    <%= link_to user_answers_path do %>
+      <i class="large material-icons">thumb_down</i>
+    <% end %>
+  </span>
+    <span class="answers-thumbup">
+      <%= link_to user_playlist_path do %>
+        <i class="large material-icons">thumb_up</i>
+      <% end %>
+  </span>
+</div>

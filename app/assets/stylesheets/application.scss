@@ -32,15 +32,8 @@
 
   .profile-location {
     position: absolute;
-    top: 220%;
-    font-size: 65px;
-  }
-
-  #mobile-name {
-    font-size: 100px;
-  }
-
-  #mobile-location {
+    top: 100%;
+    font-size: 20px;
   }
 
   .age {
@@ -86,8 +79,9 @@
     left: 3%;
     top: 9%;
   }
+
   #mobile-login {
-    font-size: 65px;
+    font-size: 30px;
   }
 
   #mobile-hamburger {
@@ -95,28 +89,15 @@
   }
   .profile {
     position: absolute;
-    left: 14%;
+    left: 10%;
   }
-  #mobile-profile {
-    width: 700px;
-    height: 700px;
-  }
+
   .btn {
     background-color: #3E505B;
   }
   .mobile-edit-button {
     position: absolute;
-    top: 250%;
-  }
-  .mobile-edit {
-    height: 70px;
-    font-size: 40px;
-    padding-top: 15px;
-  }
-  .splash-text {
-    position: absolute;
-    display: flex;
-    width: 40%;
+    top: 120%;
   }
   .musiclovers-background {
     background-image: url('http://i.imgur.com/wk8wqER.png');
@@ -136,7 +117,7 @@
     top: 40%;
     display: flex;
     width: 60%;
-    font-size: 35px;
+    font-size: 18px;
     background-color: rgba(247,247,242, 0.8);
     border-radius: 5px;
   }
@@ -146,8 +127,45 @@
     left: 30%;
     width: 40%;
     height: 5%;
-    font-size: 40px;
-    padding-top: 30px;
+    font-size: 13px;
+  }
+
+  .video-thumbup {
+    position: relative;
+    left: 90%;
+  }
+
+  .video-thumbdown {
+    position: relative;
+    left: 20%;
+  }
+
+  .video-icons {
+    position: absolute;
+    top: 69%;
+    padding-top: 15px;
+  }
+
+  .videoWrapper iframe {
+	  position: absolute;
+	  top: 30%;
+	  left: 0;
+	  width: 100%;
+	  height: 36%;
+  }
+
+  .answers-thumbup {
+    position: absolute;
+    left: 66%;
+  }
+
+  .answers-thumbdown {
+    position: absolute;;
+    left: 10%;
+  }
+
+  .answers-icons {
+    padding-top: 40px;
   }
 }
 
@@ -218,7 +236,7 @@
   .btn {
     background-color: #3E505B;
   }
-  
+
   .btn:hover{
     background-color: #64A6BD;
   }
@@ -275,4 +293,53 @@
     left: 20%;
     background-color: rgba (255, 255, 255, .7);
   }
+
+  .video-show {
+    position: absolute;
+    top: 27%;
+    left: 24%;
+  }
+
+  .video-thumbup {
+    position: relative;
+    left: 60%;
+  }
+
+  .video-thumbdown {
+    position: relative;
+    left: 15%;
+  }
+
+  .video-icons {
+    padding-top: 30px;
+  }
+
+  .answers-thumbup {
+    position: absolute;
+    left: 58%;
+  }
+
+  .answers-thumbdown {
+    position: absolute;
+    left: 31%;
+  }
+
+  .answers-icons {
+    padding-top: 40px;
+  }
+
+  .playlist-show {
+    position: absolute;
+    top: 27%;
+    left: 24%;
+  }
+
+  .videoWrapper iframe {
+	  position: absolute;
+	  top: 0;
+	  left: 0;
+	  width: 400%;
+	  height: 400%;
+  }
+
 }

@@ -1,7 +1,7 @@
 <div class="profile">
   <h3 id="mobile-name"><%= @user.first_name %> <%= @user.last_name %></h3>
   <div class='profile-photo'>
-  <img src='<%= @user.profile_photo %>' class="profile-photo" id="mobile-profile"><br>
+  <img src='<%= @user.profile_photo %>' class='profile-photo' id="mobile-profile"><br>
   <span class='age'><%= @user.age %></span>
   </div>
   <div class="profile-location">
@@ -10,7 +10,8 @@
   </div>
   <div class="mobile-edit-button">
   <% if current_user != nil && current_user.id == @user.id %>
-    <%= link_to "Edit Profile", edit_user_path, :class => "btn mobile-edit"  %>
+    <%= link_to "Edit Profile", edit_user_path, :class => "btn mobile-edit"  %> <br><br>
+    <%= link_to "Start Matching", user_path, :class => "btn mobile-edit" %>
   <% end %>
   </div>
 </div>

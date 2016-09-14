@@ -25,8 +25,8 @@ class User < ApplicationRecord
   #   uniqueness: true,
   #   length: { maximum: 50 }
 
-    # def self.confirm(params)
-    #   @user = User.where("email ILIKE ?", params[:email]).first
-    #   @user.try(:authenticate, params[:password])
-    # end
+    def self.confirm(params)
+      @user = User.where("email ILIKE ?", params[:email]).first
+      @user.try(:authenticate, params[:password])
+    end
 end
