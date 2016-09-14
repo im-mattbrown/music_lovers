@@ -1,23 +1,71 @@
 class StartMatchesController < ApplicationController
 
-  def match_criteria
+@@potential_matches = []
+@@next_match
+
+before_action :find_user, only: [:video, :answers, :playlist, :profile]
+
+  def matches
+    # get an array of compatible matches
     @user = current_user
-    if current_user.seeking = 'f4m'
-      @potential_matches = User.where(seeking: 'm4f')
-    elsif @user.seeking = 'm4f'
-      @potential_matches = User.where(seeking: 'f4m')
-    elsif @user.seeking = 'm4m'
-      @potential_matches = User.where(seeking: 'm4m')
-    else @user.seeking = 'f4f'
-      @potential_matches = User.where(seeking: 'f4f')
+    seeking = current_user.seeking
+    matches = @@potential_matches
+    if seeking == 'f4m'
+      matches = User.id.where(seeking: 'm4f')
+    elsif seeking == 'm4f'
+      matches = User.where(seeking: 'f4m')
+    elsif seeking == 'm4m'
+      matches = User.where(seeking: 'm4m')
+    else
+      matches = User.where(seeking: 'f4f')
     end
-    @potential_matches.each do |match|
-      @user.suitors.push(match.id)
+    p "MATCHES"
+    p @@potential_matches
+
+
+    # make this array an array of corresponding user ids
+    matches.each do |match|
+      p "MATCHING #{match.id} with #{current_user.id}"
+      if match.id != current_user.id
+        @@potential_matches.push(match.id)
+      end
     end
-    p @user.suitors
-    p @user.seeking
-    p current_user.seeking
-    p @user.id
+
+    # send the first matched user
+    next_id = @@potential_matches.shift
+    @next_match = User.find(next_id)
+    redirect_to next_match_path
+  end
+
+  def next_match
+    # the next match for the current_user to look at
+    next_id = @@potential_matches.shift
+    # this will be the user
+    @@next_match = User.find(next_id)
+    if @@potential_matches.length == 0
+      redirect_to user_path
+    end
+    redirect_to user_video_path
+  end
+
+  def video
+    p "MATCH"
+    p @@next_match
+  end
+
+  def answers
+  end
+
+  def playlist
+  end
+
+  def profile
+  end
+
+private
+
+  def find_user
+    @user = @@next_match
   end
 
 end

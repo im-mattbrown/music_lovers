@@ -6,7 +6,7 @@
 </div>
 <div class="video-icons">
   <span class="video-thumbdown">
-    <%= link_to user_answers_path do %>
+    <%= link_to next_match_path do %>
       <i class="large material-icons">thumb_down</i>
     <% end %>
   </span>
@@ -16,3 +16,6 @@
     <% end %>
   </span>
 </div>
+
+<%= current_user.suitors %>
+<%= current_user.seeking %>

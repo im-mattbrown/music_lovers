@@ -21,9 +21,6 @@
     background-color: #F7F7F2;
     color: #222725;
   }
-  #user_seeking {
-    display: inline;
-  }
 
   .profile-photo {
     height: 300px;
@@ -205,9 +202,6 @@
     background-color: #F7F7F2;
     color: #222725;
   }
-  #user_seeking {
-    display: inline;
-  }
 
   .profile-photo {
     height: 400px;
@@ -370,5 +364,9 @@
   }
   .user-answers {
     margin-left: 3%;
+  }
+
+  .material-icons {
+    color: #222725;
   }
 }

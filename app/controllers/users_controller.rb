@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   include AuthHelper
 
-  before_action :logged_in?, except: [:index, :new, :create]  
+  before_action :logged_in?, except: [:index, :new, :create]
   before_action :find_user, only: [:show, :edit, :update, :video, :answers, :playlist]
 
   def index
@@ -48,6 +48,22 @@ class UsersController < ApplicationController
   end
 
   def video
+    seeking = current_user.seeking
+    matches = @potential_matches
+    if seeking == 'f4m'
+      matches = User.where(seeking: 'm4f')
+    elsif seeking == 'm4f'
+      matches = User.where(seeking: 'f4m')
+    elsif seeking == 'm4m'
+      matches = User.where(seeking: 'm4m')
+    else
+      matches = User.where(seeking: 'f4f')
+    end
+    matches.each do |match|
+      if match.id != @user.id
+        current_user.suitors.push(match.id)
+      end
+    end
     #flash.now[:notice] = "Here is your potential matches profile video, proceed to judge them by it."
   end
 
