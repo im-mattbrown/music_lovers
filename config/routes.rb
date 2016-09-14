@@ -13,6 +13,7 @@ Rails.application.routes.draw do
   get '/users/:id/video' => 'users#video', as: 'user_video'
   get '/users/:id/answers' => 'users#answers', as: 'user_answers'
   get '/users/:id/playlist' => 'users#playlist', as: 'user_playlist'
+  get '/users/:id/match_criteria' =>'start_matches#match_criteria', as: 'user_matches'
   patch '/users/:id' => 'users#update'
 
 end

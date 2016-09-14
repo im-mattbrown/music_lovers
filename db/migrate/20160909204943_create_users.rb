@@ -17,7 +17,7 @@ class CreateUsers < ActiveRecord::Migration[5.0]
       t.text :answer6
       t.text :answer7
       t.string :playlist
-      t.integer :suitors, array: true, default:[]
+      t.integer :suitors, array: true, default:'{}'
 
       t.timestamps
     end

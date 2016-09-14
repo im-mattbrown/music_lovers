@@ -32,9 +32,9 @@ ActiveRecord::Schema.define(version: 20160912213934) do
     t.text     "answer6"
     t.text     "answer7"
     t.string   "playlist"
-    t.integer  "suitors"
-    t.datetime "created_at",      null: false
-    t.datetime "updated_at",      null: false
+    t.integer  "suitors",         default: [],              array: true
+    t.datetime "created_at",                   null: false
+    t.datetime "updated_at",                   null: false
     t.string   "location"
     t.string   "profile_photo"
   end

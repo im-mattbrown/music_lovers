@@ -11,7 +11,7 @@
   <div class="mobile-edit-button">
   <% if current_user != nil && current_user.id == @user.id %>
     <%= link_to "Edit Profile", edit_user_path, :class => "btn mobile-edit"  %> <br><br>
-    <%= link_to "Start Matching", user_path, :class => "btn mobile-edit" %>
+    <%= link_to "Start Matching", user_matches_path, :class => "btn mobile-edit" %>
   <% end %>
   </div>
 </div>
