@@ -3,7 +3,7 @@
   <head>
     <title>MusicLovers</title>
     <%= csrf_meta_tags %>
-
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
@@ -48,5 +48,16 @@
     </nav>
     <% end %>
     <%= yield %>
+    <% if notice %>
+      <% if flash[:bruh] %>
+       <script type="text/javascript">
+         Materialize.toast('<%= notice %>', 6000, 'bruh')
+       </script>
+      <% else %>
+       <script type="text/javascript">
+         Materialize.toast('<%= notice %>', 6000)
+       </script>
+      <% end %>
+     <% end %>
   </body>
 </html>

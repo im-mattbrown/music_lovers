@@ -1,7 +1,7 @@
 module SessionsHelper
 
   def login(user)
-    session[:user_id]= user.id
+    session[:user_id] = user.id
     @current_user = user
   end
 
@@ -11,6 +11,7 @@ module SessionsHelper
 
   def logged_in?
     if current_user == nil
+      flash[:notice] = "You must be logged in to view that."
       redirect_to login_path
     end
   end

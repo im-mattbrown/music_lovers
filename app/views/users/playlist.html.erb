@@ -1,0 +1,17 @@
+<h3> Playlist from -<%= @user.username %> </h3>
+<div class="playlist-show">
+<iframe src="https://embed.spotify.com/?uri=<%= @user.playlist %>" width="740" height="400" frameborder="0" allowtransparency="true"></iframe>
+  <div class="playlist-icons"
+    <span class="video-thumbdown">
+      <%= link_to user_answers_path do %>
+        <i class="large material-icons">thumb_down</i>
+      <% end %>
+    </span>
+      <span class="video-thumbup">
+        <%= link_to user_answers_path do %>
+          <i class="large material-icons">thumb_up</i>
+        <% end %>
+    </span>
+  </div>
+  </div>
+<div>
