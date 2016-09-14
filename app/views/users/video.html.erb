@@ -3,16 +3,16 @@
   <div class="videoWrapper">
     <iframe width="740" height="416" src="https://www.youtube.com/embed/<%= @user.profile_video %>" frameborder="0" allowfullscreen></iframe>
   </div>
-  <div class="video-icons">
-    <span class="video-thumbdown">
-      <%= link_to user_answers_path do %>
-        <i class="large material-icons">thumb_down</i>
-      <% end %>
-    </span>
-    <span class="video-thumbup">
-      <%= link_to user_answers_path do %>
-        <i class="large material-icons">thumb_up</i>
-      <% end %>
-    </span>
-  </div>
-<div>
+</div>
+<div class="video-icons">
+  <span class="video-thumbdown">
+    <%= link_to user_answers_path do %>
+      <i class="large material-icons">thumb_down</i>
+    <% end %>
+  </span>
+  <span class="video-thumbup">
+    <%= link_to user_answers_path do %>
+      <i class="large material-icons">thumb_up</i>
+    <% end %>
+  </span>
+</div>

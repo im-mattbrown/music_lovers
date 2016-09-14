@@ -1,5 +1,7 @@
-Here is where things get a bit trickier but stick with it and you will be on your way to finding great match for you. At this point you are going to make a 10 track playlist on Spotify and paste a link to its URI on this page. Think of this as your personal mixtape that represents your music style. There are instructions below if you have never done this before. Studies that I have just made up show that music preferences are the number one factor of compatability in a relationship.
-
+<p><b>Here is where things get a bit trickier, stick with it and you will be finding matches in no time. At this point you are going to make a 10 track playlist on Spotify and paste a link to its URI on this page. Click the example below if you have never done this before. Studies that I have just made up show that music preferences are the number one factor of compatability in a relationship.</b></p>
+<div class="mobile-spotify">
+  <a href="https://support.spotify.com/us/using_spotify/playlists/save-your-music-with-playlists/"><img class="mobile-spotify" src='http://i.imgur.com/g2lE0kX.png'></a>
+</div>
 <%= form_for @user, url: wizard_path  do |f| %>
   <%= f.text_field :playlist, :placeholder=>"URI here" %>
   <%= f.submit "Submit", :class=>'waves-effect waves-red waves-ripple btn' %>

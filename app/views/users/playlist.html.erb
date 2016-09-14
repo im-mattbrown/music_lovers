@@ -1,6 +1,8 @@
-<h3> Playlist from -<%= @user.username %> </h3>
+<h3 class="mobile-show-title"> Playlist from -<%= @user.username %> </h3>
 <div class="playlist-show">
-<iframe src="https://embed.spotify.com/?uri=<%= @user.playlist %>" width="740" height="400" frameborder="0" allowtransparency="true"></iframe>
+  <div class="playlistWrapper">
+    <iframe src="https://embed.spotify.com/?uri=<%= @user.playlist %>" width="740" height="400" frameborder="0" allowtransparency="true"></iframe>
+  </div>
   <div class="playlist-icons"
     <span class="video-thumbdown">
       <%= link_to user_answers_path do %>
