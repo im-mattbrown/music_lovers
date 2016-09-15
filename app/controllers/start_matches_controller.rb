@@ -34,6 +34,7 @@ before_action :find_user, only: [:video, :answers, :playlist, :profile]
     # send the first matched user
     next_id = @@potential_matches.shift
     @next_match = User.find(next_id)
+    redirect_to next_match_path
   end
 
   def next_match
@@ -41,10 +42,7 @@ before_action :find_user, only: [:video, :answers, :playlist, :profile]
     next_id = @@potential_matches.shift
     # this will be the user
     @@next_match = User.find(next_id)
-    if @@potential_matches.length <= 0
-      redirect_to no_users_path
-    end
-    redirect_to user_video_path
+    redirect_to user_video_path and return
   end
 
   def video
