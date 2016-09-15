@@ -19,13 +19,9 @@ before_action :find_user, only: [:video, :answers, :playlist, :profile]
     else
       matches = User.where(seeking: 'f4f')
     end
-    p "MATCHES"
-    p @@potential_matches
-
 
     # make this array an array of corresponding user ids
     matches.each do |match|
-      p "MATCHING #{match.id} with #{current_user.id}"
       if match.id != current_user.id
         @@potential_matches.push(match.id)
       end
@@ -49,8 +45,6 @@ before_action :find_user, only: [:video, :answers, :playlist, :profile]
   end
 
   def video
-    p "MATCH"
-    p @@next_match
   end
 
   def answers
