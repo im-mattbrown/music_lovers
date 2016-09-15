@@ -4,7 +4,7 @@
     <iframe width="740" height="416" src="https://www.youtube.com/embed/<%= @user.profile_video %>" frameborder="0" allowfullscreen></iframe>
   </div>
 </div>
-<div class="video-icons">
+<div class="video-icons" id="playlist-icons">
   <span class="video-thumbdown">
     <%= link_to next_match_path do %>
       <i class="large material-icons">thumb_down</i>
@@ -15,4 +15,18 @@
       <i class="large material-icons">thumb_up</i>
     <% end %>
   </span>
+</div>
+<div id ="footer">
+  <div class="playlist-icons">
+    <span class="thumbdown">
+      <%= link_to next_match_path do %>
+        <i class="large material-icons">thumb_down</i>
+      <% end %>
+    </span>
+    <span class="thumbup">
+      <%= link_to user_answers_path do %>
+        <i class="large material-icons">thumb_up</i>
+      <% end %>
+    </span>
+  </div>
 </div>

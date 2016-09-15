@@ -4,7 +4,7 @@
     <iframe src="https://embed.spotify.com/?uri=<%= @user.playlist %>" width="740" height="400" frameborder="0" allowtransparency="true"></iframe>
   </div>
 </div>
-<div class="playlist-icons">
+<div class="playlist-icons" id="playlist-icons">
   <span class="playlist-thumbdown">
     <%= link_to next_match_path do %>
       <i class="large material-icons">thumb_down</i>
@@ -18,13 +18,13 @@
 </div>
 <div id ="footer">
   <div class="playlist-icons">
-    <span class="playlist-thumbdown">
+    <span class="thumbdown">
       <%= link_to next_match_path do %>
         <i class="large material-icons">thumb_down</i>
       <% end %>
     </span>
-    <span class="playlist-thumbup">
-      <%= link_to user_answers_path do %>
+    <span class="thumbup">
+      <%= link_to user_profile_path do %>
         <i class="large material-icons">thumb_up</i>
       <% end %>
     </span>

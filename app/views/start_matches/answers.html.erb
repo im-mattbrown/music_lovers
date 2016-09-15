@@ -22,7 +22,7 @@
     <p><b>If you were in a band would you rather be the singer, songwriter, or play an instrument?</b></p>
     <%= @user.answer7%>
 </div>
-<div class="answers-icons">
+<div class="answers-icons" id="playlist-icons">
   <span class="answers-thumbdown">
     <%= link_to next_match_path do %>
       <i class="large material-icons">thumb_down</i>
@@ -33,4 +33,18 @@
         <i class="large material-icons">thumb_up</i>
       <% end %>
   </span>
+</div>
+<div id ="footer">
+  <div class="playlist-icons">
+    <span class="thumbdown">
+      <%= link_to next_match_path do %>
+        <i class="large material-icons">thumb_down</i>
+      <% end %>
+    </span>
+    <span class="thumbup">
+      <%= link_to user_playlist_path do %>
+        <i class="large material-icons">thumb_up</i>
+      <% end %>
+    </span>
+  </div>
 </div>

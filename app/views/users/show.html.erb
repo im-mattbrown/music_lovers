@@ -1,3 +1,4 @@
+<% if current_user != nil && current_user.id == @user.id %>
 <div class="profile">
   <h3 id="mobile-name"><%= @user.first_name %> <%= @user.last_name %></h3>
   <div class='profile-photo'>
@@ -9,9 +10,12 @@
   <%= @user.location %>
   </div>
   <div class="mobile-edit-button">
-  <% if current_user != nil && current_user.id == @user.id %>
+
     <%= link_to "Edit Profile", edit_user_path, :class => "btn mobile-edit"  %> <br><br>
     <%= link_to "Start Matching", user_matches_path, :class => "btn mobile-edit" %>
-  <% end %>
+
   </div>
 </div>
+<% else %>
+  <% flash[:notice] = "You must go through the screening process to view this profile." %>
+<% end %>
