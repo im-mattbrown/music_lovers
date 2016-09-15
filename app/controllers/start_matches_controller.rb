@@ -42,8 +42,8 @@ before_action :find_user, only: [:video, :answers, :playlist, :profile]
     next_id = @@potential_matches.shift
     # this will be the user
     @@next_match = User.find(next_id)
-    if !@@potential_matches.length
-      flash[:notice] = "You have ran out of matches. Try again later or lower your standards."
+    if @@potential_matches.length == 0
+      flash[:notice] = "This is your last potential match. Come back later or maybe lower your standards."
     end
     redirect_to user_video_path and return
   end
