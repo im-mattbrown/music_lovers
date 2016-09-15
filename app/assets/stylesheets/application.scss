@@ -202,6 +202,10 @@
   #footer {
    display: none;
   }
+
+  #mobile-hide {
+   display: none;
+  }
 }
 
 @media #{$large-and-up} {
