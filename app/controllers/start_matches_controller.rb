@@ -54,6 +54,7 @@ before_action :find_user, only: [:video, :answers, :playlist, :profile]
   end
 
   def profile
+    flash[:notice] = "Here is your match! Feel free to keep matching"
   end
 
 private
