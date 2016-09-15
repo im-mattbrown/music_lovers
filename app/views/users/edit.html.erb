@@ -10,18 +10,25 @@
     Spotify Playlist:<%= f.text_field :playlist, :placeholder=>"URI here", :class => 'inputbox' %>
     Seeking: <%= f.collection_select :seeking, User::SEEKING, :to_s, :to_s, :include_blank => false, :prompt => 'Select', :class => 'inputbox' %>
     <h5> Question #1 </h5>
+    <p></b>Tomorrow is Saturday would you rather be at a musc festival, see a show at a sold out arena, get tickets for a great local venue, go down the street to a house show or stay at home and listen to your favorite album?</b></p>
       <%= f.text_area :answer1, :placeholder => 'Answer Here', :class => 'inputbox' %>
     <h5> Question #2 </h5>
+    <p></b>Fu@k, Marry, Kill? Justin Beiber, Drake, Justin Timberlake</b></p>
       <%= f.text_area :answer2, :placeholder => 'Answer Here', :class => 'inputbox' %>
     <h5> Question #3 </h5>
+    <p></b>What is the first concert that you chose to go to and how old were you?</b></p>
       <%= f.text_area :answer3, :placeholder => 'Answer Here', :class => 'inputbox' %>
     <h5> Question #4 </h5>
+    <p></b>What is the first album that you bought for yourself?</b></p>
       <%= f.text_area :answer4, :placeholder => 'Answer Here', :class => 'inputbox' %>
     <h5> Question #5 </h5>
+    <p></b>You are in charge of booking for Coachella next year and you can resurrect the dead. Who are your three headliners?</b></p>
       <%= f.text_area :answer5, :placeholder => 'Answer Here', :class => 'inputbox' %>
     <h5> Question #6 </h5>
+    <p></b>Fu@k, Marry, Kill? Rhianna, Beyonce, Taylor Swift</b></p>
       <%= f.text_area :answer6, :placeholder => 'Answer Here', :class => 'inputbox' %>
     <h5> Question #7 </h5>
+    <p></b>If you were in a band would you rather be the singer, songwriter, or play an instrument?</b></p>
       <%= f.text_area :answer7, :placeholder => 'Answer Here', :class => 'inputbox' %>
     Profile Photo:<br><%= f.uploadcare_uploader :profile_photo, :data => {:images_only => true, :crop => "500x500 minimum", :image_shrink => "500x500", :clearable => true }, :class => 'inputbox' %><br><br>
     <%= f.submit "Submit", :class=>'waves-effect waves-red waves-ripple btn' %><br>

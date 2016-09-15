@@ -195,6 +195,10 @@
   .mobile-spotify {
     width: 100%;
   }
+
+  .material-icons {
+    color: #222725;
+  }
 }
 
 @media #{$large-and-up} {
@@ -349,10 +353,14 @@
     padding-top: 40px;
   }
 
+  .playlist-icons {
+    padding-top: 40px;
+  }
+
   .playlist-show {
     position: absolute;
     top: 27%;
-    left: 24%;
+    left: 30%;
   }
 
   .videoWrapper iframe {
@@ -368,5 +376,17 @@
 
   .material-icons {
     color: #222725;
+  }
+
+  .youtube {
+    position: relative;
+    top: 5px;
+  }
+
+  .start_matches {
+    position: absolute;
+    top: 10%;
+    left: 30%;
+    width: 40%
   }
 }

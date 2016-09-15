@@ -3,7 +3,7 @@ class ApplicationController < ActionController::Base
   include SessionsHelper
 
   def not_found
-  render :file => "/public/404"
+  render :file => "public/404"
   end
 
 end

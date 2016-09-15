@@ -3,13 +3,13 @@
   <div class="playlistWrapper">
     <iframe src="https://embed.spotify.com/?uri=<%= @user.playlist %>" width="740" height="400" frameborder="0" allowtransparency="true"></iframe>
   </div>
-  <div class="playlist-icons"
-    <span class="video-thumbdown">
+  <div class="answers-icons"
+    <span class="answers-thumbdown">
       <%= link_to next_match_path do %>
         <i class="large material-icons">thumb_down</i>
       <% end %>
     </span>
-      <span class="video-thumbup">
+      <span class="answers-thumbup">
         <%= link_to user_profile_path do %>
           <i class="large material-icons">thumb_up</i>
         <% end %>

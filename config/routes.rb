@@ -17,7 +17,8 @@ Rails.application.routes.draw do
   get '/users/:id/next_match' => 'start_matches#next_match', as: 'next_match'
   get '/users/:id/profile' => 'start_matches#profile', as: 'user_profile'
   patch '/users/:id' => 'users#update'
+  get '/users/:id/no_more' => 'start_matches#no_more', as: 'no_users'
 
-  get "*unmatched_route", to: "application#not_found"
+  get "*unmatched_route", to: "application#not_found", as: 'error'
 
 end
