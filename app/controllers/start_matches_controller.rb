@@ -11,7 +11,7 @@ before_action :find_user, only: [:video, :answers, :playlist, :profile]
     seeking = current_user.seeking
     matches = @@potential_matches
     if seeking == 'f4m'
-      matches = User.id.where(seeking: 'm4f')
+      matches = User.where(seeking: 'm4f')
     elsif seeking == 'm4f'
       matches = User.where(seeking: 'f4m')
     elsif seeking == 'm4m'
