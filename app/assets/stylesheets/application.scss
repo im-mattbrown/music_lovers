@@ -206,6 +206,12 @@
   #mobile-hide {
    display: none;
   }
+
+  .login-info {
+    position: absolute;
+    top: 90%;
+    left: 3%;
+  }
 }
 
 @media #{$large-and-up} {
